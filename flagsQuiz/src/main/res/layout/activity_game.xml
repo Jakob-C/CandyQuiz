@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gameactivity"
+    android:padding="0dp" >
+
+    <include layout="@layout/title_bar" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_below="@+id/titleBar"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/flagLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/spacesGrid1"
+        android:layout_below="@+id/question"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+
+
+        <ImageView
+            android:id="@+id/flag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="9dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/spacesGrid1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:layout_above="@id/boost"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/boost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lettersGrid"
+        android:layout_marginTop="15dp" >
+
+        <LinearLayout
+            android:id="@+id/rightHelps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <ImageButton
+                android:id="@+id/hide"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/help_clicked"
+                android:scaleType="fitXY"
+                android:src="@drawable/button_hide_game" />
+
+            <ImageButton
+                android:id="@+id/letter"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/help_clicked"
+                android:scaleType="fitXY"
+                android:src="@drawable/button_letter_game" />
+
+            <ImageButton
+                android:id="@+id/solution"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/help_clicked"
+                android:scaleType="fitXY"
+                android:src="@drawable/button_solution_game" />
+
+
+
+            <ImageButton
+                android:id="@+id/videoAd"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/help_clicked"
+                android:scaleType="fitXY"
+                android:src="@drawable/rewardedvideo_icon_game" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <GridView
+        android:id="@+id/lettersGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:columnWidth="30dp"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:listSelector="@drawable/letter_grid_selector"
+        android:numColumns="8"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/adBannerUnitId" />
+
+
+</RelativeLayout>

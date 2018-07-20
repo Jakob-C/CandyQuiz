@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gameactivity" >
+
+    <include layout="@layout/title_bar" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textStyle="bold"
+            android:textSize="35sp"
+            android:id="@+id/coinfield"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/coins"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:maxWidth="35dp" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_below="@+id/titleBar"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/btn_videoAd"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_setting_settings_sml">
+
+
+            <ImageView
+                android:id="@+id/resetImage1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/b_shop_ad" />
+
+            <TextView
+                android:id="@+id/videoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Watch a Video"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/coin_cost_videoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="(error!)"
+                android:layout_marginRight="35dp"
+                android:layout_alignParentRight="true"
+                android:textColor="#FFF"
+                android:textSize="24sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/coins"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:maxWidth="25dp"
+                android:layout_marginRight="5dp"
+                android:maxHeight="25dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/btn_instagram"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_setting_settings_sml">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/instaRL">
+
+
+
+            <ImageView
+                android:id="@+id/instaicon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/b_shop_instagram" />
+
+            <TextView
+                android:id="@+id/instaText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Follow us on Instagram"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/coin_cost_insta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="(error!)"
+                android:layout_marginRight="35dp"
+                android:layout_alignParentRight="true"
+                android:textColor="#FFF"
+                android:textSize="24sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <ImageView
+                android:id="@+id/instacoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/coins"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:maxWidth="25dp"
+                android:layout_marginRight="5dp"
+                android:maxHeight="25dp"
+                android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_share"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_setting_settings_sml">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/shareRL">
+
+
+            <ImageView
+                android:id="@+id/shareicon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/b_shop_share" />
+
+
+            <TextView
+                android:id="@+id/share_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Share with a Friend"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/coin_cost_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="(error!)"
+                android:layout_marginRight="35dp"
+                android:layout_alignParentRight="true"
+                android:textColor="#FFF"
+                android:textSize="24sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <ImageView
+                android:id="@+id/sharecoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/coins"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                android:maxWidth="25dp"
+                android:layout_marginRight="5dp"
+                android:maxHeight="25dp"
+                android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/adBannerUnitId" />
+
+</RelativeLayout>

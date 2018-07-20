@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/titleBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    tools:context=".GameActivity">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/titleBarTop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/button_back_game" />
+
+
+        <LinearLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+
+            <TextView
+                android:id="@+id/level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Level "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FFF"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+             <TextView
+                 android:id="@+id/title"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerInParent="true"
+                 android:text="1"
+                 android:textAppearance="?android:attr/textAppearanceLarge"
+                 android:textColor="#FFF"
+                 android:textSize="35sp"
+                 android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/scoreAndCoins"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/coinbackground_main"
+            android:layout_alignParentRight="true">
+
+
+            <LinearLayout
+                android:id="@+id/coinsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/coinsValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFFFFF"
+                    android:textSize="27sp"
+                    android:layout_marginRight="4dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/coinsImg"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/coins" />
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
